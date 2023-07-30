@@ -3,7 +3,7 @@
 class Database{
     private $host = "localhost";
     private $password = "";
-    private $dbname = "assignment";
+    private $dbname = "erp_system";
     private $useName = "root";
 
     protected $conn;
