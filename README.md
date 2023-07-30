@@ -56,3 +56,5 @@ The system offers a report generating area where you can:
 - For any technical issues or inquiries, please refer to the GitHub repository's issue section.
 - This ERP system was developed and tested with XAMPP, so using it with other server configurations may require adjustments.
 - Feel free to contribute to the development of this project by submitting pull requests. We appreciate your support and feedback!
+
+System explanation video - `https://drive.google.com/drive/folders/1NoR9nZISLceVm3I-QiKQMKktDod-7Rey?usp=sharing`
