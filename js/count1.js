@@ -9,7 +9,7 @@ $(document).ready(function(){
                 let count = JSON.parse(data);
                 $("#customerCount").text("Ct. "+countPrepare(count[0]['custCount']));
                 $("#itemCount").text("Ct. "+countPrepare(count[1]['itemCount']));
-
+                $("#invoiceReportCount").text("Ct. "+countPrepare(count[2]['invoiceReportCount']));
             },error(error){
                 console.log(error);
             }

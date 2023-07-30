@@ -2,6 +2,7 @@
 require_once '../database/customerconfig.php';
 require_once '../database/itemconfig.php';
 require_once '../database/counts.php';
+require_once '../database/reports.php';
 
 if(isset($_POST['method'])){
 
@@ -40,6 +41,9 @@ if(isset($_GET['get'])){
     if($_GET['get'] == "searchItem"){
         $item->searchItem($_GET['keyword']);
     }
+    if($_GET['get'] == "searchInvoiceReport"){
+        $report->searchInvoiceReport($_GET['keyword']);
+    }
 }
 
 if(isset($_GET['deleteCust'])){
@@ -56,3 +60,18 @@ if(isset($_GET['count'])){
         $count->getCount();
 }   
 
+
+//report data
+if(isset($_GET['report'])){
+    if($_GET['report'] == "invoiceReportAll"){
+       $report->getinvoiceReport();
+    }
+}
+
+//date filter
+if(isset($_GET['startDate']) && isset($_GET['endDate'])){
+    if($_GET['filter'] == 'invoiceReport'){
+        $report->filterInvoiceReport($_GET['startDate'], $_GET['endDate']);
+        //echo $_GET['startDate'], $_GET['endDate'];
+    }
+}
