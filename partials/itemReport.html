@@ -8,57 +8,22 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="../img/erp.png">
+
 </head>
 <body>
 
      
     <div class="p-3 shadow" style="height: 75px;">
         <div style="" class="container">
-        <a href="../index.html" style="color: black;"><h2 style="float:left;">ERP <span style="color:#f68026; font-weight: 700;">SYSTEM</span></h2> </a><small style="font-weight: 650; margin-left: 10px;">INVOICE REPORT</small>
+        <a href="../index.html" style="color: black;"><h2 style="float:left;">ERP <span style="color:#f68026; font-weight: 700;">SYSTEM</span></h2> </a><small style="font-weight: 650; margin-left: 10px;">ITEM REPORT</small>
         
            <input style="float:right; border-radius: 5px;" id="search" type="search"  placeholder="Search..." /> 
         
       </div>
     </div>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-5">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1">Start</span>
-                    </div>
-                    <input type="date" id="startDate" class="form-control"  aria-describedby="basic-addon1">
-                </div>
-            </div>
-
-           
-
-            <div class="col-5">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1">End</span>
-                    </div>
-                    <input type="date" id="endDate" class="form-control"  aria-describedby="basic-addon1">
-                </div>
-            </div>
-
-            <div class="col-2">
-
-                <div class="row">
-                    <div class="col-8">
-                        <button class="btn btn-outline-dark w-100" id="filter" title="Filter data with date range."><i class="fa-solid fa-filter" style="margin-right: 2px;"></i> <span>Filter</span></button>
-                        
-                     </div>
-                
-                    <div class="col-4" style="margin-left: -10px;">
-                        <button class="btn btn-dark rounded-pill" id="download" title="Download the report."><i class="fa-solid fa-download" style="font-size: medium;"></i></button>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
+    <div class="container" style="">
+        <button class="btn btn-dark rounded-pill float-right mt-4 mb-4" id="download" title="Download the report."><i class="fa-solid fa-download" style="font-size: medium;"></i> Download</button>
     </div>
 
     <div class="container mt-4 reportTable">
@@ -67,12 +32,10 @@
                 <thead >
                   <tr>
                     <th scope="col">No.</th>
-                    <th scope="col">Invoice Number</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Customer</th>
-                    <th scope="col">District</th>
-                    <th scope="col">Item Ct.</th>
-                    <th scope="col">Amount</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Sub Category</th>
+                    <th scope="col">Quantity</th>
                   </tr>
                 </thead>
                 <tbody id="tbdy">
@@ -92,7 +55,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
-    <script src="../js/invoiceReport11.js"></script>
+    <script src="../js/itemReport.js"></script>
     
 </body>
 </html>

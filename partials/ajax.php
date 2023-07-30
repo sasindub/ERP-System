@@ -44,6 +44,12 @@ if(isset($_GET['get'])){
     if($_GET['get'] == "searchInvoiceReport"){
         $report->searchInvoiceReport($_GET['keyword']);
     }
+    if($_GET['get'] == "searchInvoiceItemReport"){
+        $report->searchInvoiceItemReport($_GET['keyword']);
+    }
+    if($_GET['get'] == "searchItemReport"){
+        $report->searchItemReport($_GET['keyword']);
+    }
 }
 
 if(isset($_GET['deleteCust'])){
@@ -66,12 +72,23 @@ if(isset($_GET['report'])){
     if($_GET['report'] == "invoiceReportAll"){
        $report->getinvoiceReport();
     }
+    if($_GET['report'] == "invoiceItemReportAll"){
+        $report->getinvoiceItemReport();
+     }
+    if($_GET['report'] == "itemReportAll"){
+        $report->getitemReport();
+    }
 }
 
 //date filter
 if(isset($_GET['startDate']) && isset($_GET['endDate'])){
+
     if($_GET['filter'] == 'invoiceReport'){
         $report->filterInvoiceReport($_GET['startDate'], $_GET['endDate']);
-        //echo $_GET['startDate'], $_GET['endDate'];
+       
+    }
+    if($_GET['filter'] == 'invoiceItemReport'){
+        $report->filterInvoiceItemReport($_GET['startDate'], $_GET['endDate']);
+        
     }
 }
