@@ -1,7 +1,5 @@
-# ERP-System
-ERP system 
-
 # ERP System
+ERP System
 
 This is an ERP system that allows you to manage customers and items. Additionally, it provides features to generate and download reports.
 
